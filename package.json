@@ -1,0 +1,15 @@
+{
+  "name": "electron-ipc-tryout",
+  "version": "1.0.0",
+  "description": "trying out ipc order of operations",
+  "main": "index.js",
+  "author": "Joshua Mendenhall <joshuam@axosoft.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "dependencies": {
+    "electron": "^9.3.0",
+    "lodash": "^4.17.20"
+  }
+}
