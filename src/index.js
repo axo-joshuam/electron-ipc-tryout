@@ -15,7 +15,7 @@ let returnedIndexes = [];
 function sendIpcMessage() {
   const message = { sendIndex };
   sendIndex++;
-  setTimeout(() => ipc.send('ipc-check', message), Math.random() * 30);
+  ipc.send('ipc-check', message);
 }
 
 const sendResults = fp.debounce(3000, () => ipc.send('ipc-results', returnedIndexes));
@@ -29,7 +29,7 @@ function getIpcMessage(event, args) {
 
 function doIPC() {
   console.info('aaand go');
-  while (sendIndex < 6000) {
+  while (sendIndex < 100000) {
     sendIpcMessage();
   }
 }
